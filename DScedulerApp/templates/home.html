@@ -13,7 +13,6 @@
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-
           .left-column {
             background-color: #fff; /* Fond blanc pour la colonne de gauche */
             flex: 1; /* Occupe 50% de l'espace disponible */
@@ -25,6 +24,14 @@
             width: 30%;
              /* background-size: 80% 90%;  */
             /* background-repeat: no-repeat; */
+        }
+
+        @media (max-width: 768px){
+            .left-column{
+                background-image: none;
+
+            }
+
         }
     </style>
 </head>
@@ -43,6 +50,10 @@
     </div>
 </header>
 
+
+
+
+
 <section id="home" class="section home">
     <div class="home-content">
         <div class="text">
@@ -59,6 +70,38 @@
 </section>
 
 
+
+< <section class="partners-section">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="{% static 'images/ena.jpg' %}" alt="Partenaire 1">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/ifri.png' %}" alt="Partenaire 2">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 3">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 4">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 5">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/ifri.png' %}" alt="Partenaire 6">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/fsa.jpg' %}" alt="Partenaire 7">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/epac.jpeg' %}" alt="Partenaire 8">
+                </div>
+                <!-- Ajoutez plus de logos ici si nécessaire -->
+            </div>
+        </div>
+    </section>
 
 
 <section id="features" class="section features">
@@ -112,45 +155,52 @@
 </section>
 
 
-
+<button class="section-title" >Nos offres</button>
 <section id="offers" class="section offers">
-    <h1>Nos Offres</h1>
-    <p>Découvrez nos offres adaptées à vos besoins pour une gestion efficace et flexible des soutenances.</p>
-    <div class="offers-content">
-        <div class="offers-items">
-            <div class="offer-item">
-                <h2>Offre de Base</h2>
-                <p class="price">€29/mois</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Gestion simple des soutenances</li>
-                    <li><i class="fas fa-check-circle"></i> Interface utilisateur intuitive</li>
-                    <li><i class="fas fa-check-circle"></i> Support client standard</li>
-                </ul>
-                <img src="{% static 'images/basic.webp' %}" alt="Sun Icon" class="offer-icon">
-            </div>
-            <div class="offer-item">
-                <h2>Offre Avancée</h2>
-                <p class="price">€49/mois</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Fonctionnalités avancées</li>
-                    <li><i class="fas fa-check-circle"></i> Intégration avec d'autres outils</li>
-                    <li><i class="fas fa-check-circle"></i> Support client prioritaire</li>
-                </ul>
-                <img src="{% static 'images/standard.jpg' %}" alt="Sun Icon" class="offer-icon">
-            </div>
-            <div class="offer-item">
-                <h2>Offre Premium</h2>
-                <p class="price">€99/mois</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Toutes les fonctionnalités avancées</li>
-                    <li><i class="fas fa-check-circle"></i> Personnalisation complète</li>
-                    <li><i class="fas fa-check-circle"></i> Support dédié 24/7</li>
-                </ul>
-                <img src="{% static 'images/premium.avif' %}" alt="Sun Icon" class="offer-icon">
-            </div>
-        </div>
-    </div>
+  <div class="contain">
+  <div class="card card-1">
+    <h2>Basic</h2>
+    <h3>$0<span>/mo.</span></h3>
+    <p>Suitable for beginners</p>
+    <ul>
+      <li class="aval">2GB storage</li>
+      <li class="aval">10 accounts</li>
+      <li class="aval">50GB Bandwidth</li>
+      <li class="unaval">24/7 support</li>
+    </ul>
+    <button class="select" style="width: auto;">Choose this plan</button>
+  </div>
+  <div class="card card-2 hot-badge">
+    <h2>Standard</h2>
+    <h3>$49<span>/mo.</span></h3>
+    <p>Suitable for freelancers</p>
+    <ul>
+      <li class="aval">20GB storage</li>
+      <li class="aval">20 accounts</li>
+      <li class="aval">500GB Bandwidth</li>
+      <li class="unaval">24/7 support</li>
+    </ul>
+    <button class="select" style="width: auto;">Choose this plan</button>
+  </div>
+  <div class="card card-3">
+    <h2>Premium</h2>
+    <h3>$99<span>/mo.</span></h3>
+    <p>Suitable for businesses</p>
+    <ul>
+      <li class="aval">100GB storage</li>
+      <li class="aval">100 accounts</li>
+      <li class="aval">500GB Bandwidth</li>
+      <li class="aval">24/7 support</li>
+    </ul>
+    <button class="select" style="width:auto;">Choose this plan</button>
+  </div>
+</div>
+
 </section>
+<br> <br> <br> <br>
+<br> <br>
+<br> <br>
+
 
             <h2 style="color: black;">Formulaire de Demande de Démo</h2>
 <section id="demo">
@@ -203,67 +253,7 @@
 
 
 
-<section id="contact" class="section contact">
-    <h1 style="text-align: center;">Contact</h1>
-    <div class="contact_us_6">
-  <div class="responsive-container-block container">
-    <form class="form-box">
-      <div class="container-block form-wrapper">
-        <div class="mob-text">
-          <p class="text-blk contactus-head">
-            Get in Touch
-          </p>
-          <p class="text-blk contactus-subhead">
-            Contactez nous pour vos diverses inquiétudes
-          </p>
-        </div>
-        <div class="responsive-container-block" id="i2cbk">
-          <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
-            <p class="text-blk input-title">
-              FIRST NAME
-            </p>
-            <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name...">
-          </div>
-          <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
-            <p class="text-blk input-title">
-              EMAIL
-            </p>
-            <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email...">
-          </div>
-          <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
-            <p class="text-blk input-title">
-              TELEPHONE
-            </p>
-            <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number...">
-          </div>
-          <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
-            <p class="text-blk input-title">
-              MESSAGE ?
-            </p>
-            <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
-          </div>
-        </div>
-        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2" style="margin-left: 0%;">
-          Submit
-        </button>
-      </div>
-    </form>
-    <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
-      <div class="map-part">
-        <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
-          Contactez-nous
-        </p>
-        <p class="text-blk map-contactus-subhead">
-          Contactez nous pour vos diverses inquiétudes.
-        </p>
 
-        <div class="map-box container-block">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
 
 
 <footer class="footer">
