@@ -5,7 +5,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site One-Page</title>
+    <title>DefenseScheduler</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -58,6 +58,9 @@
     </div>
 </section>
 
+
+
+
 <section id="features" class="section features">
     <div class="features-container">
         <h1>Fonctionnalités</h1>
@@ -100,6 +103,10 @@
             <h1>À propos</h1>
             <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
             <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
+
+            <a href="{% static 'images/file.pdf' %}" class="btn-download" download>
+                <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
+            </a>
         </div>
     </div>
 </section>
@@ -181,7 +188,7 @@
                     <label for="needs">Besoins spécifiques:</label>
                     <textarea id="needs" name="needs" rows="5" required></textarea>
                 </div>
-                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Envoyer</button> </form>
+                    <button type="submit" class="btn-submit" style="height: auto; width:auto;"><i class="fas fa-paper-plane"></i> Demander demo</button> </form>
         </div>
     </section>
 </main>
@@ -236,7 +243,7 @@
             <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
           </div>
         </div>
-        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2" style="margin-left: 10%;">
+        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2" style="margin-left: 0%;">
           Submit
         </button>
       </div>
