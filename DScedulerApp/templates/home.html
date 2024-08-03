@@ -13,26 +13,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-          .left-column {
-            background-color: #fff; /* Fond blanc pour la colonne de gauche */
-            flex: 1; /* Occupe 50% de l'espace disponible */
-            padding: 20px; /* Espacement intérieur */
-            background-image: url('{% static "images/demo4.jpg" %}');
-            background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la section */
-            background-position: center; /* Centre l'image horizontalement et verticalement */
-            color: white;
-            width: 30%;
-             /* background-size: 80% 90%;  */
-            /* background-repeat: no-repeat; */
-        }
 
-        @media (max-width: 768px){
-            .left-column{
-                background-image: none;
-
-            }
-
-        }
     </style>
 </head>
 <body>
@@ -46,9 +27,10 @@
             <a href="#about">À propos</a>
             <a href="#offers">Offres</a>
         </nav>
-        <a href="#demo" class="btn-demo">Demandez une démo</a>
+        <a href="{% url 'demo' %}" class="btn-demo">Demandez une démo</a>
     </div>
 </header>
+
 
 
 
@@ -138,161 +120,151 @@
     </div>
 </section>
 
-<section id="about">
 
-<div class="about-container">
-    <div class="about-row">
-        <section class="section about">
-            <div class="about-content">
-                <img src="{% static 'images/graphes.jpg' %}" alt="Image Illustrative" class="about-image">
-                <div class="about-text">
-                    <h1>À propos</h1>
-                    <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
-                    <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
-                    <a href="{% static 'images/file.pdf' %}" class="btn-download" download>
-                        <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
-                    </a>
-                </div>
-            </div>
-        </section>
 
-        <section class="section about">
-            <div class="about-content">
-                <img src="{% static 'images/graphes.jpg' %}" alt="Image Illustrative" class="about-image">
-                <div class="about-text">
-                    <h1>À propos</h1>
-                    <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
-                    <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
-                    <a href="{% static 'images/file.pdf' %}" class="btn-download" download>
-                        <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
-                    </a>
-                </div>
-            </div>
-        </section>
+<section id="about" class="section about">
+
+
+    <div class="about-content">
+        <div class="about-text" id="part1">
+            <h1>À propos</h1>
+            <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
+            <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
+
+            <a href="{% static 'images/file.pdf' %}" class="btn-download" download>
+                <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
+            </a>
+        </div>
+            <img src="{% static 'images/about.jpg' %}" alt="Image Illustrative" class="about-image">
+
     </div>
+    <div class="about-content">
+        <img src="{% static 'images/about1.avif' %}" alt="Image Illustrative" class="about-image">
+        <div class="about-text">
+            <h1>School Solutions</h1>
+            <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
+            <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
 
-    <div class="about-row">
-        <section class="section about">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>Détails</h1>
-                    <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
-                    <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
-                </div>
-                <img src="{% static 'images/graphes.jpg' %}" alt="Image Illustrative" class="about-image">
-            </div>
-        </section>
-
-                <section class="section about">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>Détails</h1>
-                    <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
-                    <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
-                </div>
-                <img src="{% static 'images/graphes.jpg' %}" alt="Image Illustrative" class="about-image">
-            </div>
-        </section>
+            <a href="{% static 'images/file.pdf' %}" class="btn-download" download>
+                <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
+            </a>
+        </div>
     </div>
-</div>
-
+</section>
 <br> <br>
 
 
-<button class="section-title" >Nos offres</button>
-<section id="offers" class="section offers">
-  <div class="contain">
-  <div class="card card-1">
-    <h2>Basic</h2>
-    <h3>$0<span>/mo.</span></h3>
-    <p>Suitable for beginners</p>
-    <ul>
-      <li class="aval">2GB storage</li>
-      <li class="aval">10 accounts</li>
-      <li class="aval">50GB Bandwidth</li>
-      <li class="unaval">24/7 support</li>
-    </ul>
-    <button class="select" style="width: auto;">Choose this plan</button>
-  </div>
-  <div class="card card-2 hot-badge">
-    <h2>Standard</h2>
-    <h3>$49<span>/mo.</span></h3>
-    <p>Suitable for freelancers</p>
-    <ul>
-      <li class="aval">20GB storage</li>
-      <li class="aval">20 accounts</li>
-      <li class="aval">500GB Bandwidth</li>
-      <li class="unaval">24/7 support</li>
-    </ul>
-    <button class="select" style="width: auto;">Choose this plan</button>
-  </div>
-  <div class="card card-3">
-    <h2>Premium</h2>
-    <h3>$99<span>/mo.</span></h3>
-    <p>Suitable for businesses</p>
-    <ul>
-      <li class="aval">100GB storage</li>
-      <li class="aval">100 accounts</li>
-      <li class="aval">500GB Bandwidth</li>
-      <li class="aval">24/7 support</li>
-    </ul>
-    <button class="select" style="width:auto;">Choose this plan</button>
-  </div>
-</div>
+
+
+
+
+<section class="pricing-plans">
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Basic Plan</h2>
+            <p class="price">$19/month</p>
+        </div>
+        <div class="recommended">
+            <span>Most Recommended</span>
+        </div>
+        <p class="description">The Basic Plan offers essential features for individuals or small teams looking to get started.</p>
+        <ul class="features">
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 1</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 2</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon arrow-icon"></div>
+                <span>Feature 3</span>
+            </li>
+        </ul>
+        <a href="#" class="btn-get-started">Get Started</a>
+        <br> <br>
+                    No credit card recommended
+
+    </div>
+
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Large Plan</h2>
+            <p class="price">$49/month</p>
+        </div>
+         <div class="recommended">
+            <span>Most Recommended</span>
+        </div>
+        <p class="description">The Large Plan is designed for growing teams needing advanced features and more flexibility.</p>
+        <ul class="features">
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 1</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 2</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon arrow-icon"></div>
+                <span>Feature 3</span>
+            </li>
+        </ul>
+        <a href="#" class="btn-get-started">Get Started</a>
+        <br> <br>
+                    No credit card recommended
+
+    </div>
+
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Advanced Plan</h2>
+            <p class="price">$99/month</p>
+        </div>
+         <div class="recommended">
+            <span>Most Recommended</span>
+        </div>
+        <p class="description">The Advanced Plan offers the most comprehensive set of features for large teams and enterprises.</p>
+        <ul class="features">
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 1</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>Feature 2</span>
+            </li>
+            <hr>
+            <li>
+                <div class="icon arrow-icon"></div>
+                <span>Feature 3</span>
+            </li>
+        </ul>
+        <a href="#" class="btn-get-started">Get Started</a>
+        <br> <br>
+            No credit card recommended
+
+    </div>
+
+            <br> <br>
 
 </section>
+
+
+
+
 <br> <br> <br> <br>
 <br> <br>
 <br> <br>
 
 
-            <h2 style="color: black;">Formulaire de Demande de Démo</h2>
-<section id="demo">
-<main>
-    <section class="left-column">
 
-</section>
-
-    <section class="right-column">
-        <div class="container">
-            <form action="#" method="POST" id="demoForm" style="width: 100%;">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="institution">Institution:</label>
-                    <input type="text" id="institution" name="institution" required>
-                </div>
-                <div class="form-group">
-                    <label for="role">Rôle:</label>
-                    <select id="role" name="role" required>
-                        <option value="">Sélectionner le rôle</option>
-                        <option value="Professeur">Professeur</option>
-                        <option value="Étudiant">Étudiant</option>
-                        <option value="Administrateur">Administrateur</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="needs">Besoins spécifiques:</label>
-                    <textarea id="needs" name="needs" rows="5" required></textarea>
-                </div>
-                    <button type="submit" class="btn-submit" style="height: auto; width:auto;"><i class="fas fa-paper-plane"></i> Demander demo</button> </form>
-        </div>
-    </section>
-</main>
-</section>
-<script>
-    function toggleBenefitDetails(element) {
-        var details = element.querySelector('.benefit-details');
-        details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
-    }
-</script>
 
 
 
@@ -324,15 +296,6 @@
                 </ul>
             </div>
 
-            <div class="footer-section social-media">
-                <h2>Suivez-nous</h2>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
         </div>
     </div>
     <div class="footer-bottom">

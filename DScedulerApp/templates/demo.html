@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefenseScheduler</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+            .left-column {
+            background-color: #fff; /* Fond blanc pour la colonne de gauche */
+            flex: 1; /* Occupe 50% de l'espace disponible */
+            padding: 20px; /* Espacement intérieur */
+            background-image: url('{% static "images/demo4.jpg" %}');
+            background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la section */
+            background-position: center; /* Centre l'image horizontalement et verticalement */
+            color: white;
+            width: 30%;
+             /* background-size: 80% 90%;  */
+            /* background-repeat: no-repeat; */
+        }
+
+        @media (max-width: 768px){
+            .left-column{
+                background-image: none;
+
+            }
+
+        }
+
+    </style>
+    </head>
+
+<body>
+
+
+<header class="header">
+    <div class="container">
+        <a href="#home"><img src="{% static 'images/DS-New.png' %}" alt="Logo" class="logo"></a>
+        <nav class="nav">
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="#features">Fonctionnalités</a>
+            <a href="#about">À propos</a>
+            <a href="#offers">Offres</a>
+        </nav>
+        <a href="{% url 'demo' %}" class="btn-demo">Demandez une démo</a>
+    </div>
+</header>
+
+<br> <br> <br><br><br>
+<br>
+
+
+<h2 style="color: black;">Formulaire de Demande de Démo</h2>
+<section id="demo">
+<main>
+    <section class="left-column">
+
+</section>
+
+    <section class="right-column">
+        <div class="container">
+            <form action="#" method="POST" id="demoForm" style="width: 100%;">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="institution">Institution:</label>
+                    <input type="text" id="institution" name="institution" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Rôle:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Sélectionner le rôle</option>
+                        <option value="Professeur">Professeur</option>
+                        <option value="Étudiant">Étudiant</option>
+                        <option value="Administrateur">Administrateur</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit" style="height: auto; width:auto; margin-bottom: 200px; margin-top: 20px;"><i class="fas fa-paper-plane"></i> Demander demo</button> </form>
+
+        </div>
+    </section>
+</main>
+</section>
+<script>
+    function toggleBenefitDetails(element) {
+        var details = element.querySelector('.benefit-details');
+        details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
+    }
+</script>
+
+
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-logo">
+            <img src="{% static 'images/DS-New.png' %}" alt="Logo">
+        </div>
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h2>Contact</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue Exemple, Ville, Pays</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> contact@example.com</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#offers">Offres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>

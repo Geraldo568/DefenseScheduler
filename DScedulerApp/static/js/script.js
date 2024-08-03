@@ -13,15 +13,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                nav.classList.remove('active'); // Fermer le menu après le clic
+            const href = this.getAttribute('href');
+            if (href === "{% url 'demo' %}") {
+                // Permet la redirection normale pour le lien "Demandez une démo"
+                return 0;
+            }
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    nav.classList.remove('active'); // Fermer le menu après le clic
+                }
+            } else {
+                nav.classList.remove('active');
             }
         });
     });
