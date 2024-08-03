@@ -105,7 +105,7 @@ body {
 }
 
 .partner-item img {
-    max-width: 80%;
+    max-width: 50%;
     height: auto;
     display: block;
     padding: 10px;
@@ -118,14 +118,15 @@ body {
     .partner-item {
         flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 items per row on smaller screens */
     }
+
 }
 
 @media (max-width: 480px) {
     .partner-item {
         flex: 1 1 100%; /* Adjusted to fit 1 item per row on very small screens */
     }
-}
 
+}
 
 /* home part */
 
@@ -208,7 +209,7 @@ body {
 }
 
 .btn-start:hover {
-    background: #e0a800;
+    background:#218838;
 }
 
 
@@ -287,17 +288,31 @@ body {
 
 
 /* Styles pour la section À propos */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les rangées */
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espace entre les sections */
+}
+
 .about {
+    flex: 1;
     background: #fff; /* Fond blanc */
-    padding: 50px 20px;
-    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 20px;
 }
 
 .about-text {
@@ -307,11 +322,13 @@ body {
 
 .about-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.reverse-order {
+    flex-direction: row-reverse;
 }
 
 .about-text h1 {
@@ -339,7 +356,6 @@ body {
     background: #0056b3;
 }
 
-
 .btn-download {
     display: inline-block;
     padding: 10px 20px;
@@ -361,12 +377,10 @@ body {
     background-color: #218838;
 }
 
-
 /* Responsive design */
 @media (max-width: 768px) {
-    .about-content {
+    .about-row {
         flex-direction: column;
-        text-align: center;
     }
 
     .about-text, .about-image {
@@ -379,9 +393,11 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .reverse-order {
+        flex-direction: column;
+    }
 }
-
-
 
 
 
@@ -808,6 +824,7 @@ body {
     background: linear-gradient(90deg, #2196f3, #2c3e50);
     color: #fff;
     padding: 40px 20px;
+    margin-top: 200px;
 }
 
 .footer-top {
