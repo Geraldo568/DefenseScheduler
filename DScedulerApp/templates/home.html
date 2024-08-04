@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -20,7 +21,7 @@
 
 <header class="header">
     <div class="container">
-        <a href="#home"><img src="{% static 'images/DS-New.png' %}" alt="Logo" class="logo"></a>
+        <a href="{% url 'home' %}"><img src="{% static 'images/DS-New.png' %}" alt="Logo" class="logo"></a>
         <nav class="nav">
             <a href="#home">Accueil</a>
             <a href="#features">Fonctionnalités</a>
@@ -30,8 +31,6 @@
         <a href="{% url 'demo' %}" class="btn-demo">Demandez une démo</a>
     </div>
 </header>
-
-
 
 
 
@@ -54,7 +53,8 @@
 
 
 <section class="partners-section">
-        <div class="container">
+    <div class="container">
+        <marquee scrollamount="5" scrolldelay="10" behavior="scroll">
             <div class="partners-grid">
                 <div class="partner-item">
                     <img src="{% static 'images/ena.jpg' %}" alt="Partenaire 1">
@@ -82,8 +82,14 @@
                 </div>
                 <!-- Ajoutez plus de logos ici si nécessaire -->
             </div>
-        </div>
-    </section>
+        </marquee>
+    </div>
+</section>
+
+
+<!-- Inclure jQuery et Slick Carousel JS -->
+
+
 
 
 <section id="features" class="section features">
@@ -155,12 +161,12 @@
                 <i class="fas fa-download"></i> Télécharger le Manuel d'Utilisation
             </a>
         </div>
-            <img src="{% static 'images/about.jpg' %}" alt="Image Illustrative" class="about-image">
+            <img src="{% static 'images/about1.avif' %}" alt="Image Illustrative" class="about-image" style="height: auto;">
 
     </div>
     <div class="about-content">
         <img src="{% static 'images/about1.avif' %}" alt="Image Illustrative" class="about-image">
-        <div class="about-text">
+        <div class="about-text" id="part2">
             <h1>School Solutions</h1>
             <p>Découvrez pourquoi notre application est la meilleure pour gérer les soutenances de vos étudiants. Grâce à ses fonctionnalités innovantes et sa flexibilité, elle s'adapte parfaitement aux besoins de vos écoles.</p>
             <a href="#learn-more" class="btn-learn-more"><i class="fas fa-info-circle"></i> Learn More</a>
@@ -192,18 +198,22 @@
         <ul class="features">
             <li>
                 <div class="icon check-icon"></div>
-                <span>Feature 1</span>
+                <span>4-5 Weeks from to finish</span>
             </li>
-            <hr>
-            <li>
-                <div class="icon check-icon"></div>
-                <span>Feature 2</span>
-            </li>
-            <hr>
             <li>
                 <div class="icon arrow-icon"></div>
-                <span>Feature 3</span>
+                <span>Data Sprint</span>
             </li>
+             <li>
+                <div class="icon arrow-icon"></div>
+                <span>Results revision</span>
+            </li>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>20 Days of support </span>
+                <br>
+            </li>
+
         </ul>
         <a href="#" class="btn-get-started">Get Started</a>
         <br> <br>
@@ -223,17 +233,20 @@
         <ul class="features">
             <li>
                 <div class="icon check-icon"></div>
-                <span>Feature 1</span>
+                <span>4-5 Weeks from to finish</span>
             </li>
-            <hr>
-            <li>
-                <div class="icon check-icon"></div>
-                <span>Feature 2</span>
-            </li>
-            <hr>
             <li>
                 <div class="icon arrow-icon"></div>
-                <span>Feature 3</span>
+                <span>Data Sprint</span>
+            </li>
+             <li>
+                <div class="icon arrow-icon"></div>
+                <span>Results revision</span>
+            </li>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>20 Days of support </span>
+                <br>
             </li>
         </ul>
         <a href="#" class="btn-get-started">Get Started</a>
@@ -254,17 +267,20 @@
         <ul class="features">
             <li>
                 <div class="icon check-icon"></div>
-                <span>Feature 1</span>
+                <span>4-5 Weeks from to finish</span>
             </li>
-            <hr>
-            <li>
-                <div class="icon check-icon"></div>
-                <span>Feature 2</span>
-            </li>
-            <hr>
             <li>
                 <div class="icon arrow-icon"></div>
-                <span>Feature 3</span>
+                <span>Data Sprint</span>
+            </li>
+             <li>
+                <div class="icon arrow-icon"></div>
+                <span>Results revision</span>
+            </li>
+            <li>
+                <div class="icon check-icon"></div>
+                <span>20 Days of support </span>
+                <br>
             </li>
         </ul>
         <a href="#" class="btn-get-started">Get Started</a>

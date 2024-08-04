@@ -217,6 +217,18 @@ body {
 
 
 
+@media (max-width: 768px) {
+    .header .nav {
+        display: none;
+    }
+
+    .header .btn-demo {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+
 
 
 
@@ -292,8 +304,13 @@ body {
 /* Styles pour la section À propos */
 
 #part1{
-    margin-left: 12%;
+    margin-left: 11%;
 
+}
+
+#part2{
+    margin-left: 10%;
+    margin-right: 12%;
 }
 .about {
     background: #fff; /* Fond blanc */
@@ -309,13 +326,12 @@ body {
 }
 
 .about-text {
-    max-width: 50%;
+    max-width: 30%;
     flex: 1;
 }
 
 .about-image {
-    width: 100%;
-    max-width: 500px;
+    max-width: 30%;
     height: auto;
     border-radius: 8px;
     margin-left: auto;
@@ -640,7 +656,7 @@ body {
 
 .footer-section.quick-links ul li {
     margin-right: 15px; /* Space between items */
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 5px; /* Space below each item to handle wrapping */
 }
 
@@ -656,6 +672,12 @@ body {
 .footer-section.quick-links ul li a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
+
+
+
+
+
 
 .footer {
     background: linear-gradient(-100deg, #2196f3, #2c3e50);
@@ -677,12 +699,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 200px; /* Adjust this size as needed */
+    max-width: 130px; /* Adjust this size as needed */
 }
 
 .footer-logo img {
-    margin-top: 90%;
-    max-width: 90%;
+    margin-top: 60%;
+    max-width: 60%;
     height: auto; /* Ensure the image maintains its proportions */
 }
 
@@ -906,6 +928,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: white;
 }
 
 .features li {
@@ -917,8 +940,9 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+
 .features li:last-child {
-    border-bottom: none;
+    margin-bottom: 20px;
 }
 
 .icon {
@@ -971,7 +995,3 @@ body {
         width: 100%;
     }
 }
-
-
-
-

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partenaires</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        .partners-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .partner-item {
+            flex: 1 1 calc(12.5% - 20px); /* Ajusté pour afficher 4 éléments par ligne */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner-item img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .partner-item {
+                flex: 1 1 calc(50% - 20px); /* Ajusté pour afficher 2 éléments par ligne sur les petits écrans */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .partner-item {
+                flex: 1 1 100%; /* Ajusté pour afficher 1 élément par ligne sur les très petits écrans */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="{% static 'images/ena.jpg' %}" alt="Partenaire 1">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/ifri.png' %}" alt="Partenaire 2">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 3">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 4">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/logo1.webp' %}" alt="Partenaire 5">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/ifri.png' %}" alt="Partenaire 6">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/fsa.jpg' %}" alt="Partenaire 7">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/epac.jpeg' %}" alt="Partenaire 8">
+                </div>
+                <!-- Ajoutez plus de logos ici si nécessaire -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Inclure jQuery et Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.partners-grid').slick({
+                slidesToShow: 4, // Nombre de logos affichés à la fois
+                slidesToScroll: 1,
+                autoplay: true, // Défilement automatique
+                autoplaySpeed: 0, // Vitesse de défilement (0 pour un défilement continu)
+                speed: 3000, // Vitesse de transition entre les logos (ajustez selon votre préférence)
+                cssEase: 'linear', // Effet de transition linéaire pour un défilement fluide
+                infinite: true, // Défilement infini
+                pauseOnHover: true, // Mettre en pause lorsqu'on survole
+                centerMode: true, // Centre les logos actifs
+                variableWidth: true, // Permet la largeur variable pour s'adapter aux logos
+                prevArrow: false, // Masque la flèche précédente
+                nextArrow: false // Masque la flèche suivante
+            });
+        });
+    </script>
+</body>
+</html>
