@@ -107,7 +107,7 @@ body {
 }
 
 .partner-item img {
-    max-width: 50%;
+    max-width: 20%;
     height: auto;
     display: block;
     padding: 10px;
@@ -842,15 +842,15 @@ body {
   text-align: center;
   padding: 5px 5px;
   margin-left: 10.75%;
-  margin-bottom: -120px;
 }
 .pricing-plans {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
     background-color: #f8f8f8;
+    margin-top: -80px;
 }
 
 .plan {
