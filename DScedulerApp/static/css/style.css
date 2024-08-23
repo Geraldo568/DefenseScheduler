@@ -133,7 +133,7 @@ body {
 /* home part */
 
 #home{
-    margin-bottom: 200px;
+    margin-bottom: 0px;
 
 }
 
@@ -308,6 +308,9 @@ body {
 
 }
 
+#about-content1{
+    margin-top: -150px;
+}
 #part2{
     margin-left: 10%;
     margin-right: 12%;
@@ -456,9 +459,10 @@ body {
 
         .right-column {
             background-color: white;
-            flex: 1; /* Occupe 50% de l'espace disponible */
+            flex: 1.1; /* Occupe 50% de l'espace disponible */
             padding: 20px; /* Espacement intérieur */
             color: black; /* Couleur de texte blanche */
+            margin-top: 100px;
         }
 
         .right-column h2 {
@@ -846,7 +850,7 @@ body {
 .pricing-plans {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     padding: 0px;
     background-color: #f8f8f8;
@@ -857,14 +861,12 @@ body {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
-    width: 480px;
+    padding: 10px;
+    width: 400px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-     padding-bottom: 60px;
-
-
+    padding-bottom: 60px;
 }
 
 .plan-header {
